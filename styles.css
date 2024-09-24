@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc07 100%
+  );
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.clock::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  background-color: black;
+  transform: translate(-50%, -50%);
+}
+
+.clock .number {
+  --rotation: 0;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 15px;
+}
+
+/* ponteiros */
+.clock .hand {
+  --rotation: 0;
+
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: black;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation)*1deg ));
+  transform-origin: bottom;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.clock .hand.seconds {
+  width: 3px;
+  height: 40%;
+  background-color: red;
+}
+
+.clock .hand.minutes {
+  width: 7px;
+  height: 35%;
+  background-color: black;
+}
+
+.clock .hand.hours {
+  width: 10px;
+  height: 30%;
+  background-color: black;
+}
+
+.clock .number.number-1 {
+  --rotation: 30deg;
+}
+
+.number-1 .spin {
+  transform: rotate(-30deg);
+}
+
+.clock .number.number-2 {
+  --rotation: 60deg;
+}
+
+.number-2 .spin {
+  transform: rotate(-60deg);
+}
+
+.clock .number.number-3 {
+  --rotation: 90deg;
+}
+
+.number-3 .spin {
+  transform: rotate(-90deg);
+}
+
+.clock .number.number-4 {
+  --rotation: 120deg;
+}
+
+.number-4 .spin {
+  transform: rotate(-120deg);
+}
+
+.clock .number.number-5 {
+  --rotation: 150deg;
+}
+
+.number-5 .spin {
+  transform: rotate(-150deg);
+}
+
+.clock .number.number-6 {
+  --rotation: 180deg;
+}
+
+.number-6 .spin {
+  transform: rotate(-180deg);
+}
+
+.clock .number.number-7 {
+  --rotation: 210deg;
+}
+
+.number-7 .spin {
+  transform: rotate(-210deg);
+}
+
+.clock .number.number-8 {
+  --rotation: 240deg;
+}
+
+.number-8 .spin {
+  transform: rotate(-240deg);
+}
+
+.clock .number.number-9 {
+  --rotation: 270deg;
+}
+
+.number-9 .spin {
+  transform: rotate(-270deg);
+}
+
+.clock .number.number-10 {
+  --rotation: 300deg;
+}
+
+.number-10 .spin {
+  transform: rotate(-300deg);
+}
+
+.clock .number.number-11 {
+  --rotation: 330deg;
+}
+
+.number-11 .spin {
+  transform: rotate(-330deg);
+}
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
